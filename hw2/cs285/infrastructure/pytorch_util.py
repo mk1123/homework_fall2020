@@ -7,23 +7,23 @@ Activation = Union[str, nn.Module]
 
 
 _str_to_activation = {
-    'relu': nn.ReLU(),
-    'tanh': nn.Tanh(),
-    'leaky_relu': nn.LeakyReLU(),
-    'sigmoid': nn.Sigmoid(),
-    'selu': nn.SELU(),
-    'softplus': nn.Softplus(),
-    'identity': nn.Identity(),
+    "relu": nn.ReLU(),
+    "tanh": nn.Tanh(),
+    "leaky_relu": nn.LeakyReLU(),
+    "sigmoid": nn.Sigmoid(),
+    "selu": nn.SELU(),
+    "softplus": nn.Softplus(),
+    "identity": nn.Identity(),
 }
 
 
 def build_mlp(
-        input_size: int,
-        output_size: int,
-        n_layers: int,
-        size: int,
-        activation: Activation = 'tanh',
-        output_activation: Activation = 'identity',
+    input_size: int,
+    output_size: int,
+    n_layers: int,
+    size: int,
+    activation: Activation = "tanh",
+    output_activation: Activation = "identity",
 ):
     """
         Builds a feedforward neural network
@@ -80,4 +80,4 @@ def from_numpy(*args, **kwargs):
 
 
 def to_numpy(tensor):
-    return tensor.to('cpu').detach().numpy()
+    return tensor.to("cpu").detach().numpy()
